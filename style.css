@@ -1,0 +1,249 @@
+section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: #121321;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f3f5f5;
+  }
+  section::before {
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    transform: translate(-150px, -100px);
+    background: linear-gradient(90deg, #9c279c, #f3f5f5);
+  }
+  section::after {
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    transform: translate(150px, 100px);
+    background: linear-gradient(90deg, #9c279c, #f3f5f5);
+  }
+  .container {
+    position: relative;
+    height: 275px;
+    width: 410px;
+    z-index: 100;
+    transition: 0.7s;
+    transform-style: preserve-3d;
+  }
+  .container:hover {
+    transform: rotateY(180deg);
+  }
+  .container .card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 25px 45px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    border: 1px solid #12211a(255, 255, 255, 0.2);
+    backface-visibility: hidden;
+  }
+  .front-face .logo img {
+    width: 90px;
+    margin-top: 25px;
+    margin-left: 15px;
+  }
+  .front-face .chip {
+    width: 50px;
+    margin-left: 300px;
+    padding: 20px;
+    margin-top: -5px;
+  }
+  .front-face .card-details {
+    margin-top: -50px;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .text {
+    font-size: 15px;
+    margin-left: 20px;
+    margin-top: 50px;
+    font-family: monospace;
+  }
+  .number {
+    margin-left: 25px;
+    margin-top: -31px;
+    font-size: 25px;
+    font-family: monospace;
+  }
+  .name {
+    margin-left: 26px;
+    font-size: 25px;
+    font-family: monospace;
+    margin-top: -20px;
+  }
+  .valid {
+    font-size: 12px;
+    margin-top: -90px;
+    margin-left: 325px;
+    font-family: monospace;
+  }
+  .date {
+    font-size: 16px;
+    margin-left: 335px;
+    margin-top: -25px;
+    font-family: monospace;
+  }
+  
+  .container2 {
+    position: relative;
+    height: 275px;
+    width: 410px;
+    z-index: 100;
+    transform-style: preserve-3d;
+  }
+  .card-back-face {
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 25px 45px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    border: 1px solid #12211a(255, 255, 255, 0.2);
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+  }
+  .card-back-face .ph {
+    font-size: 10px;
+    margin-top: 5px;
+    padding: 15px;
+  }
+  .card-back-face .magnetic-strip {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    height: 45px;
+    width: 100%;
+    background: #121321;
+  }
+  .card-back-face .cvv {
+    margin-top: 55px;
+    margin-left: 10px;
+    height: 40px;
+    width: 70%;
+    border-radius: 6px;
+    background-color: aliceblue;
+  }
+  .cvv i {
+    color: black;
+    font-size: 25px;
+  }
+  .free {
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  @media (max-width: 768px) {
+    .container, .container2 {
+      height: 250px;
+      width: 350px;
+    }
+    .front-face .logo img {
+      width: 70px;
+    }
+    .front-face .chip {
+      width: 40px;
+      margin-left: 270px;
+    }
+    .text {
+      font-size: 13px;
+      margin-top: 30px;
+      word-wrap: break-word;
+    }
+    .number {
+      font-size: 20px;
+      word-wrap: break-word;
+    }
+    .name {
+      font-size: 20px;
+      word-wrap: break-word;
+    }
+    .valid {
+      font-size: 10px;
+      margin-left: 300px;
+    }
+    .date {
+      font-size: 14px;
+      margin-left: 310px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container, .container2 {
+      height: 220px;
+      width: 310px;
+    }
+    .front-face .logo img {
+      width: 60px;
+    }
+    .front-face .chip {
+      width: 35px;
+      margin-left: 240px;
+    }
+    .text {
+      font-size: 12px;
+      margin-top: 20px;
+      word-wrap: break-word;
+    }
+    .number {
+      font-size: 18px;
+      word-wrap: break-word;
+    }
+    .name {
+      font-size: 18px;
+      word-wrap: break-word;
+    }
+    .valid {
+      font-size: 9px;
+      margin-left: 270px;
+    }
+    .date {
+      font-size: 12px;
+      margin-left: 280px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .container, .container2 {
+      height: 180px;
+      width: 270px;
+    }
+    .front-face .logo img {
+      width: 50px;
+    }
+    .front-face .chip {
+      width: 30px;
+      margin-left: 220px;
+    }
+    .text {
+      font-size: 11px;
+      margin-top: 15px;
+      word-wrap: break-word;
+    }
+    .number {
+      font-size: 16px;
+      word-wrap: break-word;
+    }
+    .name {
+      font-size: 16px;
+      word-wrap: break-word;
+    }
+    .valid {
+      font-size: 8px;
+      margin-left: 240px;
+    }
+    .date {
+      font-size: 10px;
+      margin-left: 250px;
+    }
+  }
+  
